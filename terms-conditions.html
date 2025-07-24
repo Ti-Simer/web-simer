@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simer Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#014e87', // azul corporativo
+                        secondary: '#64748B', // gris suave
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header id="main-header">
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('main-header').innerHTML = data;
+                });
+        </script>
+    </header>
+    <div class="bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 py-16">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex justify-between gap-2">
+                    <a href="index.html"
+                        class="inline-flex items-center border border-sky-500 px-3 py-1.5 rounded-md text-sky-700 hover:bg-sky-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 16l-4-4m0 0l4-4m-4 4h18">
+                            </path>
+                        </svg>
+                        <span class="ml-1 font-bold text-lg">Atrás</span>
+                    </a>
+                </div>
+
+                <h1 class="text-3xl font-bold text-gray-900 mb-8 mt-6">Términos y Condiciones</h1>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">1. Responsable del Sitio Web</h2>
+                    <div class="prose text-gray-600">
+                        <p>
+                            SIMER ELECTRONIC S.A.S — Pasto, Nariño, Colombia <br>
+                        <ul>
+                            <li>Gerente: Carlos Burbano Burbano</li>
+                            <li>Gerente Técnico: Héctor Ancízar Benavides</li>
+                            <li>Director de Tecnología: Reinel Andrés Mora</li>
+                        </ul>
+                        </p>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">2. Condiciones de Uso</h2>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex gap-3">
+                                <svg class="h-6 w-6 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Al acceder y usar esta aplicación, el usuario acepta que la información
+                                    proporcionada será utilizada únicamente para los fines aquí descritos.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <svg class="h-6 w-6 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>No está permitido compartir credenciales ni información sensible fuera de la
+                                    plataforma.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <svg class="h-6 w-6 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>El usuario se compromete a cumplir con las leyes colombianas aplicables y con
+                                    estos términos.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">3. Limitación de Responsabilidad</h2>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ml-8">
+                                <p class="text-sm text-yellow-700">
+                                <ul class="list-disc text-sm text-yellow-700">
+                                    <li>
+                                        SIMER ELECTRONIC S.A.S no responde por el mal uso de la aplicación ni por daños
+                                        directos o indirectos derivados de ella, salvo responsabilidad legalmente
+                                        exigible.
+
+                                    </li>
+                                    <li>
+                                        No se asume responsabilidad por la divulgación de datos fuera de los casos
+                                        permitidos por la legislación colombiana de protección de datos.
+
+                                    </li>
+                                    <li>
+                                        El usuario indemnizará a SIMER ELECTRONIC S.A.S por cualquier reclamo o gasto
+                                        legal
+                                        surgido de un uso indebido de la plataforma.
+
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">4. Legislación Aplicable</h2>
+                    <div class="prose text-gray-600">
+                        <p>Esta sección y sus términos se rigen por la Ley 1581 de 2012 (Protección de Datos Personales)
+                            y demás normativas colombianas pertinentes.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">5. Contacto</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-between">
+                        <p class="text-gray-600">¿Tiene preguntas sobre los Términos de Servicio?</p>
+                        <a href="mailto:contacto@simerelectronics.com"
+                            class="inline-flex items-center text-sky-700 hover:text-sky-600">
+                            <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Contacta con nosotros
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>

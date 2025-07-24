@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simer Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#014e87', // azul corporativo
+                        secondary: '#64748B', // gris suave
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header id="main-header">
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('main-header').innerHTML = data;
+                });
+        </script>
+    </header>
+    <main>
+        <section id="our">
+            <script>
+                fetch('our.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('our').innerHTML = data;
+                    });
+            </script>
+        </section>
+
+        <section id="about-us">
+            <script>
+                fetch('about-us.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('about-us').innerHTML = data;
+                    });
+            </script>
+        </section>
+
+        <section id="services">
+            <script>
+                fetch('services.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('services').innerHTML = data;
+                    });
+            </script>
+        </section>
+
+        <section id="buttons-fixed">
+            <script>
+                fetch('buttons-fixed.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('buttons-fixed').innerHTML = data;
+                    });
+            </script>
+        </section>
+
+    </main>
+    <footer>
+        <section id="footer">
+            <script>
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer').innerHTML = data;
+                    });
+            </script>
+        </section>
+    </footer>
+</body>
+
+</html>

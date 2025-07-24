@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simer Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#014e87', // azul corporativo
+                        secondary: '#64748B', // gris suave
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<header
+    class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+    <div class="px-4">
+        <div class="flex items-center justify-between">
+            <div class="flex shrink-0">
+                <a aria-current="page" class="flex items-center" href="index.html">
+                    <img class=" h-14 w-auto" src="img/logonav.png" alt="">
+                    <p class="font-medium text-sky-900 ml-2"> SIMER ELECTRONIC</p>
+                </a>
+            </div>
+            <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
+
+                <a aria-current="page"
+                    onclick="document.getElementById('poseidon-content-1').scrollIntoView({behavior: 'smooth'}); return false;"
+                    class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+                    href="#poseidon-content-1">¿Que es Eolo?</a>
+
+                <a aria-current="page"
+                    onclick="document.getElementById('poseidon-content-2').scrollIntoView({behavior: 'smooth'}); return false;"
+                    class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+                    href="#poseidon-content-2">Caracteristicas</a>
+
+                <a aria-current="page"
+                    onclick="document.getElementById('poseidon-content-3').scrollIntoView({behavior: 'smooth'}); return false;"
+                    class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
+                    href="#poseidon-content-3">Funcionamiento</a>
+
+            </div>
+            <div class="flex items-center justify-end gap-3">
+                <a class="hidden items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-gray-50 sm:inline-flex"
+                    href="#">Registrarse</a>
+                <a class="inline-flex items-center justify-center rounded-xl bg-sky-900 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    href="#">Ingresar</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="relative  text-white overflow-hidden  ">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-cover bg-center "
+        style="background-image: url('img/banner-fenix.png'); filter: brightness(0.9);">
+    </div>
+
+    <div class="container mx-auto lg:px-12 px-5 py-24 md:py-32 relative z-10 lg:h-[75vh]">
+        <div class="flex flex-col md:flex-row items-center justify-around">
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 relative">
+                <h1 class="text-5xl md:text-8xl font-bold mb-6 leading-tight ">
+                    Sistema
+                    <br />
+                    <span
+                        class="bg-gradient-to-r from-blue-700 via-sky-400 to-sky-400 inline-block text-transparent bg-clip-text">
+                        Eolo
+                    </span>
+                </h1>
+
+                <p class="text-xl mb-5 text-gray-300 ">
+                    Sistema de control que combina hardware y software para el llenado preciso de cilindros de GLP
+                    de
+                    diferentes capacidades. Sistema de fácil instalación, versátil, seguro, con trazabilidad
+                    completa
+                    del proceso
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
+
+                    <button class="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
+                        <div class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg"></div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500">
+                        </div>
+                        <div class="relative flex items-center justify-center gap-2">
+                            <span class="text-white font-medium">Más información</span>
+                            <svg class="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <a href="index.html">
+                        <button
+                            class="w-full sm:w-auto px-6 py-3 rounded-lg border border-white/10 bg-white/5 backdrop-blur-lg text-white/70 hover:bg-white/10 hover:text-white transition-all min-w-[160px]">
+                            Inicio
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="w-full md:w-2/5 md:pl-12 ">
+                <div
+                    class="bg-white bg-opacity-10 backdrop-filter md:backdrop-blur-lg relative  rounded-xl p-8 shadow-2xl">
+                    <h2 class="text-2xl font-semibold mb-6">Caracteristicas principales</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-yellow-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span>Automatización y precisión en el llenado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-green-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                            <span>Software inteligente con validaciones, reportes y acceso web</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                </path>
+                            </svg>
+                            <span>Trazabilidad completa del cilindro</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                fill="white" />
+        </svg>
+    </div>
+</section>
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                animation: {
+                    'fade-in': 'fade-in 0.5s ease-out',
+                    'slide-up': 'slide-up 0.7s ease-out',
+                    'slide-left': 'slide-left 0.7s ease-out',
+                    'float': 'float 3s ease-in-out infinite',
+                    'text-shimmer': 'text-shimmer 2s ease-in-out infinite',
+                },
+                keyframes: {
+                    'fade-in': {
+                        '0%': { opacity: '0' },
+                        '100%': { opacity: '1' }
+                    },
+                    'slide-up': {
+                        '0%': { transform: 'translateY(20px)', opacity: '0' },
+                        '100%': { transform: 'translateY(0)', opacity: '1' }
+                    },
+                    'slide-left': {
+                        '0%': { transform: 'translateX(20px)', opacity: '0' },
+                        '100%': { transform: 'translateX(0)', opacity: '1' }
+                    },
+                    'float': {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' }
+                    },
+                    'text-shimmer': {
+                        '0%': { backgroundPosition: '100% 50%' },
+                        '100%': { backgroundPosition: '0% 50%' }
+                    }
+                }
+            }
+        }
+    };
+</script>
+
+<body class="bg-transparent">
+    <!-- Content Section Component -->
+    <section id="poseidon-content-1" class="relative py-8 sm:py-12 md:py-16 overflow-hidden">
+        <!-- Content Container -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-7 xl:col-span-8 order-2 lg:order-1">
+                    <article class="prose prose-invert prose-lg max-w-none">
+                        <h2
+                            class="text-2xl sm:text-3xl font-light tracking-tight text-gray-900 mb-6 sm:mb-8 animate-fade-in">
+                            Automatización y Precisión en el Envasado
+                        </h2>
+                        <div class="space-y-4 sm:space-y-6 text-gray-700 text-base sm:text-lg">
+                            <p class="animate-slide-up" style="animation-delay: 0.1s">
+                                FÉNIX III es un sistema diseñado para automatizar, controlar y dar trazabilidad al
+                                proceso de
+                                llenado de cilindros de GLP. Combina hardware inteligente y software especializado para
+                                garantizar eficiencia, seguridad y cumplimiento normativo.
+                            </p>
+                            <p class="animate-slide-up" style="animation-delay: 0.2s">
+                                El Sistema de Envasado Inteligente de GLP ofrece una solución automatizada y precisa que
+                                optimiza la eficiencia operativa en plantas de llenado. Gracias a básculas inteligentes
+                                con control en tiempo real y dosificación automática, se garantiza la exactitud del peso
+                                en cada cilindro, minimizando errores humanos mediante la lectura de códigos de barras
+                                (NIF) y la eliminación de intervención manual. El sistema cuenta con trazabilidad
+                                completa del proceso, validaciones de seguridad, alertas inteligentes y un avanzado
+                                módulo de reportes con acceso web, lo que permite el monitoreo remoto, control detallado
+                                del personal y análisis operativo en tiempo real. Además, su arquitectura modular y
+                                comunicación inalámbrica aseguran alta estabilidad y escalabilidad en entornos
+                                exigentes.
+                            </p>
+                            <div class="relative my-8 sm:my-12 animate-fade-in" style="animation-delay: 0.3s">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-gray-200/50 to-transparent rounded-lg sm:rounded-xl">
+                                </div>
+                                <blockquote class="relative border-l-2 border-neutral-700 pl-4 sm:pl-6 py-3 sm:py-4">
+                                    <p class="text-lg sm:text-xl text-gray-900 italic font-light">
+                                        "Una tecnología muy avanzada puede parecer magica para quien no conoce su funcionamiento."
+                                    </p>
+                                    <cite class="block mt-3 sm:mt-4 text-sm text-neutral-400">— Ivan Mesa</cite>
+                                </blockquote>
+                            </div>
+                            <p class="animate-slide-up" style="animation-delay: 0.4s">
+                                Con FÉNIX III, impulsamos una transformación tecnológica en el envasado de GLP,
+                                integrando automatización, trazabilidad y control inteligente para garantizar procesos
+                                más seguros, eficientes y precisos. Esta solución marca un nuevo horizonte en la gestión
+                                operativa, alineada con los estándares más exigentes de calidad e innovación.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar Content -->
+                <aside class="lg:col-span-5 xl:col-span-4 order-1 lg:order-2 space-y-6 sm:space-y-8">
+                    <!-- Key Points -->
+                    <div class="bg-gray-50/0 backdrop-blur-sm border border-neutral-800 rounded-lg sm:rounded-xl p-4 sm:p-6 animate-slide-left"
+                        style="animation-delay: 0.5s">
+                        <h3 class="text-base sm:text-lg font-light text-gray-900 mb-3 sm:mb-4">Fundamentos Clave</h3>
+                        <ul class="space-y-2 sm:space-y-3 text-neutral-400 text-sm sm:text-base">
+                            <li class="flex items-center gap-3">
+                                <div class="w-1 h-1 bg-neutral-700 rounded-full"></div>
+                                <span>Automatización del proceso de llenado</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1 h-1 bg-neutral-700 rounded-full"></div>
+                                <span>Trazabilidad del cilindro</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1 h-1 bg-neutral-700 rounded-full"></div>
+                                <span>Monitoreo y validación en tiempo real</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1 h-1 bg-neutral-700 rounded-full"></div>
+                                <span>Gestión y análisis de datos operativos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Topics -->
+                    <div class="space-y-3 sm:space-y-4 animate-slide-left" style="animation-delay: 0.6s">
+                        <h3 class="text-base sm:text-lg font-light text-gray-900">Componentes Clave</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                madre</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                análoga</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                de potencia</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                barcode</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                de regulación</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <div id="poseidon-content-2" class="relative overflow-hidden bg-gray-100 pt-16 pb-32 space-y-24">
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
+
+                    <div>
+                        <div>
+                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="oklch(98.5% 0.002 247.839)" class="size-8"
+                                    class="h-8 w-8 text-gray-50">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                            </span>
+                        </div>
+
+                        <div class="mt-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+                                Control de llenado por código de barras(NIF):
+                            </h2>
+                            <p class="mt-4 text-lg text-gray-600">
+                                El sistema Fenix utiliza un lector de código de barras para identificar el cilindro
+                                y su
+                                capacidad, asegurando que el llenado se realice con precisión. Esto elimina errores
+                                humanos y
+                                garantiza que cada cilindro reciba la cantidad exacta de GLP según su especificación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <img loading="lazy" width="647" height="486"
+                            class="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                            style="color:transparent" src="img/fenix1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+                    <div>
+                        <div>
+                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="oklch(98.5% 0.002 247.839)" class="size-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+
+                            </span>
+                        </div>
+                        <div class="mt-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+                                Sistema de información local:
+                            </h2>
+                            <p class="mt-4 text-lg text-gray-600">
+                                El sistema Fenix cuenta con un software de gestión local que permite el control
+                                completo
+                                del proceso de llenado. Este software incluye validaciones de seguridad, reportes
+                                detallados y
+                                acceso web para monitoreo remoto, lo que facilita la gestión operativa y la toma de
+                                decisiones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <img alt="Inbox user interface" loading="lazy" width="647" height="486"
+                            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                            style="color:transparent" src="img/fenix2.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
+                    <div>
+                        <div>
+                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                    class="h-8 w-8 text-gray-50">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="mt-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+                                Componentes Electrónicos de Alta Integración:
+                            </h2>
+                            <p class="mt-4 text-lg text-gray-600">
+                                El sistema Fenix utiliza componentes electrónicos avanzados, incluyendo tarjetas madre,
+                                tarjetas análogas, tarjetas de potencia, tarjetas de código de barras y tarjetas de
+                                regulación. Estos componentes trabajan en conjunto para garantizar un control preciso y
+                                eficiente del proceso de llenado, mejorando la seguridad y la trazabilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <img loading="lazy" width="646" height="485"
+                            class="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                            style="color:transparent" src="img/fenix3.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="poseidon-content-3"
+        class="relative h-screen flex flex-col items-center justify-center text-center text-white mx-auto bg-gray-100">
+        <div class="video-docker absolute w-full h-[70%] overflow-hidden">
+            <video class="min-w-full min-h-[70%] absolute object-cover" src="img/video-fenix.mp4" type="video/mp4"
+                autoplay muted loop></video>
+        </div>
+        <div class="video-content space-y-2 z-10">
+            <h1 class="font-light text-6xl">Sistema Fenix III</h1>
+            <h3 class="font-light text-3xl">- Cilindros -</h3>
+        </div>
+    </section>
+
+    <style>
+        .video-docker video {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video-docker::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+
+    <div class="bg-sky-950 pt-9">
+        <div class="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
+            <div class="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
+                <div class="md:w-[316px]">
+                    <p class="text-[18px] font-medium text-white">
+                    <h1 class="text-white font-bold">
+                        <span class="text-slate-400">SIMER</span>ELECTRONIC
+                    </h1>
+                    </p>
+                    <p class="mt-[18px] text-[15px] font-normal text-white/[80%]">
+                        Nuestros sistemas no solo automatizan procesos, sino que protegen vidas, optimizan recursos y
+                        garantizan trazabilidad en cada actividad, convertimos desafíos operativos en oportunidades de
+                        crecimiento.</p>
+                    <div class="mt-[18px] flex gap-4">
+                        <a class="hover:scale-110" target="_blank" href="https://facebook.com/tu_pagina">
+                            <div class="flex size-10 items-center justify-center rounded-lg bg-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a class="hover:scale-110" target="_blank" href="https://facebook.com/tu_pagina">
+                            <div
+                                class="flex size-10 items-center justify-center rounded-lg bg-gradient-to-r from-pink-500 to-yellow-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a class="hover:scale-110" target="_blank" href="https://facebook.com/tu_pagina">
+                            <div class="flex size-10 items-center justify-center rounded-lg bg-cyan-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-[316px]">
+                    <div class="mt-[23px] flex">
+                        <div class="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8472 14.8554L16.4306 12.8764L16.4184 12.8707C16.1892 12.7727 15.939 12.7333 15.6907 12.7562C15.4424 12.7792 15.2037 12.8636 14.9963 13.002C14.9718 13.0181 14.9484 13.0357 14.9259 13.0545L12.6441 14.9998C11.1984 14.2976 9.70595 12.8164 9.00376 11.3895L10.9519 9.07294C10.9706 9.0495 10.9884 9.02606 11.0053 9.00075C11.1407 8.79384 11.2229 8.55667 11.2445 8.31035C11.2661 8.06402 11.2264 7.81618 11.1291 7.58887V7.57762L9.14438 3.15356C9.0157 2.85662 8.79444 2.60926 8.51362 2.44841C8.2328 2.28756 7.9075 2.22184 7.58626 2.26106C6.31592 2.42822 5.14986 3.05209 4.30588 4.01615C3.4619 4.98021 2.99771 6.21852 3.00001 7.49981C3.00001 14.9436 9.05626 20.9998 16.5 20.9998C17.7813 21.0021 19.0196 20.5379 19.9837 19.6939C20.9477 18.85 21.5716 17.6839 21.7388 16.4136C21.7781 16.0924 21.7125 15.7672 21.5518 15.4864C21.3911 15.2056 21.144 14.9843 20.8472 14.8554ZM16.5 19.4998C13.3185 19.4963 10.2682 18.2309 8.01856 15.9813C5.76888 13.7316 4.50348 10.6813 4.50001 7.49981C4.49648 6.58433 4.82631 5.69887 5.42789 5.00879C6.02947 4.3187 6.86167 3.87118 7.76907 3.74981C7.7687 3.75355 7.7687 3.75732 7.76907 3.76106L9.73782 8.16731L7.80001 10.4867C7.78034 10.5093 7.76247 10.5335 7.74657 10.5589C7.60549 10.7754 7.52273 11.0246 7.5063 11.2825C7.48988 11.5404 7.54035 11.7981 7.65282 12.0307C8.5022 13.7679 10.2525 15.5051 12.0084 16.3536C12.2428 16.465 12.502 16.5137 12.7608 16.495C13.0196 16.4762 13.2692 16.3907 13.485 16.2467C13.5091 16.2305 13.5322 16.2129 13.5544 16.1942L15.8334 14.2498L20.2397 16.2232C20.2397 16.2232 20.2472 16.2232 20.25 16.2232C20.1301 17.1319 19.6833 17.9658 18.9931 18.5689C18.3028 19.172 17.4166 19.5029 16.5 19.4998Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-[18px]">
+                            <a href="tel:+573137507352" class="font-Inter text-[14px] font-medium text-white">
+                                +57 3137507352</a>
+                            <p class="font-Inter text-[12px] font-medium text-white">Numero de contacto</p>
+                        </div>
+                    </div>
+                    <div class="mt-[23px] flex">
+                        <div class="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                            <svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 0H1C0.801088 0 0.610322 0.0790178 0.46967 0.21967C0.329018 0.360322 0.25 0.551088 0.25 0.75V13.5C0.25 13.8978 0.408035 14.2794 0.68934 14.5607C0.970644 14.842 1.35218 15 1.75 15H18.25C18.6478 15 19.0294 14.842 19.3107 14.5607C19.592 14.2794 19.75 13.8978 19.75 13.5V0.75C19.75 0.551088 19.671 0.360322 19.5303 0.21967C19.3897 0.0790178 19.1989 0 19 0ZM10 7.98281L2.92844 1.5H17.0716L10 7.98281ZM7.25406 7.5L1.75 12.5447V2.45531L7.25406 7.5ZM8.36406 8.51719L9.48906 9.55312C9.62743 9.68014 9.80842 9.75062 9.99625 9.75062C10.1841 9.75062 10.3651 9.68014 10.5034 9.55312L11.6284 8.51719L17.0659 13.5H2.92844L8.36406 8.51719ZM12.7459 7.5L18.25 2.45438V12.5456L12.7459 7.5Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-[18px]">
+                            <a href="mailto:contacto@simerelectronics.com"
+                                class="font-Inter text-[14px] font-medium text-[#fff]">contacto@simerelectronics.com</a>
+                            <p class="font-Inter text-[12px] font-medium text-[#fff]">Correo</p>
+                        </div>
+                    </div>
+                    <div class="mt-[23px] flex">
+                        <div class="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                            <svg width="18" height="21" viewBox="0 0 18 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 4.5C8.25832 4.5 7.5333 4.71993 6.91661 5.13199C6.29993 5.54404 5.81928 6.12971 5.53545 6.81494C5.25162 7.50016 5.17736 8.25416 5.32205 8.98159C5.46675 9.70902 5.8239 10.3772 6.34835 10.9017C6.8728 11.4261 7.54098 11.7833 8.26841 11.9279C8.99584 12.0726 9.74984 11.9984 10.4351 11.7145C11.1203 11.4307 11.706 10.9501 12.118 10.3334C12.5301 9.7167 12.75 8.99168 12.75 8.25C12.75 7.25544 12.3549 6.30161 11.6517 5.59835C10.9484 4.89509 9.99456 4.5 9 4.5ZM9 10.5C8.55499 10.5 8.11998 10.368 7.74997 10.1208C7.37996 9.87357 7.09157 9.52217 6.92127 9.11104C6.75097 8.6999 6.70642 8.2475 6.79323 7.81105C6.88005 7.37459 7.09434 6.97368 7.40901 6.65901C7.72368 6.34434 8.12459 6.13005 8.56105 6.04323C8.9975 5.95642 9.4499 6.00097 9.86104 6.17127C10.2722 6.34157 10.6236 6.62996 10.8708 6.99997C11.118 7.36998 11.25 7.80499 11.25 8.25C11.25 8.84674 11.0129 9.41903 10.591 9.84099C10.169 10.2629 9.59674 10.5 9 10.5ZM9 0C6.81273 0.00248131 4.71575 0.872472 3.16911 2.41911C1.62247 3.96575 0.752481 6.06273 0.75 8.25C0.75 11.1938 2.11031 14.3138 4.6875 17.2734C5.84552 18.6108 7.14886 19.8151 8.57344 20.8641C8.69954 20.9524 8.84978 20.9998 9.00375 20.9998C9.15772 20.9998 9.30796 20.9524 9.43406 20.8641C10.856 19.8147 12.1568 18.6104 13.3125 17.2734C15.8859 14.3138 17.25 11.1938 17.25 8.25C17.2475 6.06273 16.3775 3.96575 14.8309 2.41911C13.2843 0.872472 11.1873 0.00248131 9 0ZM9 19.3125C7.45031 18.0938 2.25 13.6172 2.25 8.25C2.25 6.45979 2.96116 4.7429 4.22703 3.47703C5.4929 2.21116 7.20979 1.5 9 1.5C10.7902 1.5 12.5071 2.21116 13.773 3.47703C15.0388 4.7429 15.75 6.45979 15.75 8.25C15.75 13.6153 10.5497 18.0938 9 19.3125Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-[18px]">
+                            <a href="https://www.google.com/maps/place/SIMER+ELECTRONIC+SAS/@1.2283882,-77.2730773,143m/data=!3m1!1e3!4m10!1m2!2m1!1ssimer+electronics!3m6!1s0x8e2ed50052d31701:0xf970b2dd958cb4fa!8m2!3d1.2284363!4d-77.2726007!15sChFzaW1lciBlbGVjdHJvbmljc5IBDG1hbnVmYWN0dXJlcqoBWwoIL20vMDJtcnAQASoVIhFzaW1lciBlbGVjdHJvbmljcygAMh8QASIbTeoBotH83Zak1o_w9F8-AJ62B1SZ3WAVgPg6MhUQAiIRc2ltZXIgZWxlY3Ryb25pY3PgAQA!16s%2Fg%2F11wmyy48d9?hl=es&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+                                class="font-Inter text-[14px] font-medium text-[#fff]" target="_blank"
+                                rel="noopener noreferrer">
+                                Pasto (Nariño) Colombia.
+                            </a>
+                            <p class="font-Inter text-[12px] font-medium text-white">Dirección</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex w-full flex-col justify-between text-white sm:flex-row md:mt-0 md:max-w-[341px]">
+                    <div class="">
+                        <p class="text-deutziawhite font-inter text-[18px] font-medium leading-normal">Secciones</p>
+                        <ul>
+                            <li class="mt-[15px]"><a
+                                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                                    class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                    href="#">Inicio</a></li>
+                            <li class="mt-[15px]"><a
+                                    onclick="document.getElementById('poseidon-content-1').scrollIntoView({behavior: 'smooth'}); return false;"
+                                    class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                    href="#poseidon-content-1">¿Que es Fenix?</a></li>
+                            <li class="mt-[15px]"><a
+                                    onclick="document.getElementById('poseidon-content-2').scrollIntoView({behavior: 'smooth'}); return false;"
+                                    class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                    href="#poseidon-content-2">Caracteristicas</a></li>
+                            <li class="mt-[15px]"><a
+                                    onclick="document.getElementById('poseidon-content-3').scrollIntoView({behavior: 'smooth'}); return false;"
+                                    class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                    href="#poseidon-content-3">Funcionamiento</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-4 sm:mt-0">
+                        <p class="text-deutziawhite font-inter text-[18px] font-medium">Términos y privacidad</p>
+                        <div class="flex gap-4 sm:flex-col">
+                            <ul>
+                                <li class="mt-[15px]"><a
+                                        class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                        href="terms-conditions.html">Términos y condiciones</a></li>
+                                <li class="mt-[15px]"><a
+                                        class="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                                        href="privacy.html">Política de privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-[30px] text-white" />
+            <div class="flex items-center justify-center pb-8 pt-[9px] md:py-8">
+                <p class="text-[10px] font-normal text-white md:text-[12px]">
+                    © Copyright
+                    <!-- -->2019
+                    <!-- -->, All Rights Reserved by SIMER ELECTRONIC S.A.S
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed right-5 bottom-10 pb-4 flex flex-col gap-3" style="z-index: 2;">
+        <a href="https://api.whatsapp.com/send?phone=573137507352" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10 bg-green-500 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M20.52 3.48A11.92 11.92 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.12 1.6 5.91L0 24l6.27-1.62A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zM12 22a9.93 9.93 0 0 1-5.1-1.39l-.36-.21-3.72.96.99-3.63-.24-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.27-7.05c-.29-.14-1.72-.84-1.98-.94-.27-.1-.47-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.24-.46-2.37-1.47a8.77 8.77 0 0 1-1.63-2.03c-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.49-.49-.66-.5h-.56c-.2 0-.52.07-.8.37-.29.29-1.04 1.02-1.04 2.48 0 1.45 1.06 2.85 1.2 3.05.14.2 2.1 3.21 5.09 4.5.71.31 1.26.5 1.69.64.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.37.24-.67.24-1.24.17-1.37-.07-.14-.26-.2-.55-.34z" />
+            </svg>
+        </a>
+
+        <a href="mailto:contacto@simerelectronics.com"
+            class="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10 bg-sky-700 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.104 0 2-.897 2-2V6c0-1.103-.896-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V8.489l8 5.333 8-5.333V18H4z" />
+            </svg>
+        </a>
+
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+            class="flex items-center justify-center w-12 h-12 xs:w-10 xs:h-10 bg-sky-900 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+        </a>
+    </div>
+
+</body>
+
+</html>
