@@ -1,0 +1,55 @@
+.wrapper img{
+   border-radius: 0.5rem; 
+}
+
+.wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 16rem;
+    animation: animate 34s linear
+    infinite;  
+}
+
+
+#portrait-only{
+    display: none;
+}
+
+#landscape-only {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    #landscape-only {
+        display: block;
+    }
+}
+
+@media (orientation: portrait) {
+    #portrait-only {
+        display: block;
+    }
+}
+
+/* 
+  El valor de `translateX` depende de la cantidad de imágenes en el slider.
+  Cada imagen ocupa 100vw (el ancho completo de la ventana).
+  Por eso, si tienes 4 imágenes, el total es 400vw.
+
+  Para recorrer el slider hasta que la última imagen quede visible en pantalla,
+  debes moverlo hacia la izquierda (-X) en múltiplos de 100vw.
+
+  Ejemplo:
+    - 2 imágenes → translateX(-100vw)
+    - 3 imágenes → translateX(-200vw)
+    - 4 imágenes → translateX(-300vw)
+    - 5 imágenes → translateX(-400vw)
+
+  El signo negativo indica que la animación se mueve hacia la izquierda.
+*/
+@keyframes animate{
+    to {
+        transform: translateX(-300vw);
+    }
+}
+

@@ -37,47 +37,125 @@
 </header>
 
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 h-[70vh]">
-  <img src="img/banner-p2.png" alt=""
-    class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+  
+<div class="overflow-hidden absolute inset-0 -z-10 w-full h-full">
+  <div class="wrapper flex w-max h-full md:animate-scroll-slider">
+      <img src="img/banner-p2.png" class="h-full w-screen object-cover object-right md:object-center" alt="Banner 1" style="filter: brightness(0.5);">
+      <img src="img/banner-poseidon.png" class="h-full w-screen object-cover object-right md:object-center" alt="Banner 2" style="filter: brightness(0.5);">
+      <img src="img/banner-fenix.png" class="h-full w-screen object-cover object-right md:object-center" alt="Banner 3">
+      <img src="img/banner-p2.png" class="h-full w-screen object-cover object-right md:object-center" alt="Banner 4" style="filter: brightness(0.5);">
+    </div>
+  </div>
+
+  <div class="overflow-hidden absolute inset-0 -z-10 w-full h-full" id="portrait-only">
+    <div class="flex w-max h-full">
+      <img src="img/banner-p2.png" class="h-full w-screen object-cover object-right md:object-center" alt="Banner 1" style="filter: brightness(0.5);">
+    </div>
+  </div>
 
   <div class="absolute bottom-0 left-0 right-0">
     <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
         fill="oklch(96.7% 0.003 264.542)" />
-      <rect x="0" y="119" width="1440" height="2" fill="oklch(96.7% 0.003 264.542)"/>
+      <rect x="0" y="119" width="1440" height="2" fill="oklch(96.7% 0.003 264.542)" />
     </svg>
   </div>
 
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="flex flex-col lg:flex-row mx-auto max-w-7xl px-6 lg:px-8 gap-6">
+
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <h1 class="text-5xl text-white font-bold sm:text-6xl">
+      <h1 class="text-white mt-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
         <span class="text-blue-300">SIMER</span>ELECTRONIC
       </h1>
-      <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
+      <p class="flex mt-8 ml-3 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-pretty text-gray-300">
         HARDWARE Y SOFTWARE INDUSTRIAL
       </p>
     </div>
-    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+    <div
+      class="cursor-pointer w-full max-w-xs scale-75 sm:scale-90 md:scale-100 md:max-w-[30vh] mx-auto mt-0 md:mt-12 md:ml-16"
+      onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'}); return false;">
+      <div
+        class="bg-white/10 hover:bg-white/20 hover:text-white/80 backdrop-blur-sm rounded-lg p-5 shadow-md border border-white/10">
+        <h3 class="text-lg font-semibold mb-4 text-white/70 text-center">Nuestras Productos</h3>
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Producto 1 -->
+          <div class="bg-white/5 rounded-md p-3 border border-white/10 hover:border-blue-400/30 transition-colors">
+            <div class="flex flex-col text-blue-400 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Válvula -->
+                <path d="M9 2h6v2H9z" />
+                <!-- Parte superior curva -->
+                <path d="M8 6h8a2 2 0 0 1 2 2v2H6V8a2 2 0 0 1 2-2z" />
+                <!-- Cuerpo del cilindro -->
+                <rect x="6" y="10" width="12" height="10" rx="2" />
+                <!-- Línea decorativa -->
+                <line x1="6" y1="15" x2="18" y2="15" />
+              </svg>
+              <h4 class="text-sm font-medium text-white/70 text-center">FENIXIII</h4>
+            </div>
+          </div>
 
-      <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Clientes activos</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
+          <!-- Producto 2 -->
+          <div class="bg-white/5 rounded-md p-3 border border-white/10 hover:border-blue-400/30 transition-colors">
+            <div class="flex flex-col text-blue-400 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-droplets-icon lucide-droplets">
+                <path
+                  d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
+                <path
+                  d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
+              </svg>
+              <h4 class="text-sm font-medium text-white/70 text-center">EOLO</h4>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="bg-white/5 rounded-md p-3 border border-white/10 hover:border-blue-400/30 transition-colors">
+            <div class="flex flex-col text-blue-400 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Cuerpo del tanque -->
+                <rect x="3" y="10" width="18" height="8" rx="4" />
+
+                <!-- Soportes inferiores -->
+                <line x1="7" y1="18" x2="7" y2="20" />
+                <line x1="17" y1="18" x2="17" y2="20" />
+
+                <!-- Óvalo superior (más pegado al cuerpo) -->
+                <ellipse cx="12" cy="9.5" rx="3" ry="1.2" />
+              </svg>
+              <h4 class="text-sm font-medium text-white/70 text-center">ATHENEA</h4>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="bg-white/5 rounded-md p-3 border border-white/10 hover:border-blue-400/30 transition-colors">
+            <div class="flex flex-col text-blue-400 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- Cisterna principal -->
+                <rect x="3" y="9" width="10" height="6" rx="3" />
+
+                <!-- Línea base larga y delgada (chasis) -->
+                <line x1="3" y1="15.5" x2="19" y2="15.5" />
+
+                <!-- Cabina del carrotanque -->
+                <path d="M13 10h4l2 2v3h-6z" />
+
+                <!-- Ruedas (subidas) -->
+                <circle cx="6" cy="17" r="1" />
+                <circle cx="12" cy="17" r="1" />
+                <circle cx="18" cy="17" r="1" />
+              </svg>
+              <h4 class="text-sm font-medium text-white/70 text-center">POSEIDON</h4>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Equipos instalados</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Horas de actividad</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">12.369</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Tiempo de soporte</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">Ilimitado</dd>
-        </div>
-      </dl>
+      </div>
     </div>
   </div>
 </div>
