@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Corporativo</title>
+    <meta name="google-signin-client_id"
+        content="89930732527-hrdoef8icenja2j2uotkg997jnej1l6v.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -39,10 +42,10 @@
                 <div class="text-right mb-2">
                     <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">v1.0.0</span>
                 </div>
-                <h1 class="text-2xl font-bold text-gray-800 mb-1">Crear Cuenta</h1>
+                <h1 class="text-2xl font-bold text-sky-800 mb-1">Crear Cuenta</h1>
                 <p class="text-gray-600 mb-8">Complete el formulario de registro</p>
 
-                <form class="space-y-6">
+                <form class="space-y-6" id="registerForm">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">Nombres</label>
@@ -51,7 +54,8 @@
                                 placeholder="Juan Carlos" required>
                         </div>
                         <div>
-                            <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Apellidos</label>
+                            <label for="last-name"
+                                class="block text-sm font-medium text-gray-700 mb-1">Apellidos</label>
                             <input type="text" id="last-name"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                                 placeholder="Pérez Gómez" required>
@@ -66,34 +70,51 @@
                     </div>
 
                     <div>
-                        <label for="corporate-email" class="block text-sm font-medium text-gray-700 mb-1">Correo Corporativo</label>
+                        <label for="corporate-email" class="block text-sm font-medium text-gray-700 mb-1">Correo
+                            Corporativo</label>
                         <input type="email" id="corporate-email"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                             placeholder="nombre.apellido@empresa.com" required>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="corporate-password" class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                        <div class="relative">
+                            <label for="corporate-password"
+                                class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
                             <input type="password" id="corporate-password"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent pr-10"
                                 placeholder="••••••••" required>
+                            <button type="button" class="absolute right-3 bottom-3 text-gray-400 hover:text-sky-600"
+                                onclick="togglePasswordVisibility('corporate-password', 'passwordToggleIcon1')">
+                                <i class="far fa-eye" id="passwordToggleIcon1"></i>
+                            </button>
                         </div>
-                        <div>
-                            <label for="confirm-password" class="block text-sm font-medium text-gray-700 mb-1">Confirmar Contraseña</label>
+                        <div class="relative">
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-700 mb-1">Confirmar
+                                Contraseña</label>
                             <input type="password" id="confirm-password"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent pr-10"
                                 placeholder="••••••••" required>
+                            <button type="button" class="absolute right-3 bottom-3 text-gray-400 hover:text-sky-600"
+                                onclick="togglePasswordVisibility('confirm-password', 'passwordToggleIcon2')">
+                                <i class="far fa-eye" id="passwordToggleIcon2"></i>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="flex items-center">
-                        <input type="checkbox" id="terms"
-                            class="h-4 w-4 text-sky-600 focus:ring-sky-500 border-gray-300 rounded" required>
-                        <label for="terms" class="ml-2 block text-sm text-gray-700">
-                            Acepto los <a href="terms-conditions.html" class="text-sky-600 hover:text-sky-800">Términos y Condiciones</a> y la 
-                            <a href="privacy.html" class="text-sky-600 hover:text-sky-800">Política de Privacidad</a>
-                        </label>
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input type="checkbox" id="terms"
+                                class="h-4 w-4 text-sky-600 focus:ring-sky-500 border-gray-300 rounded" required>
+                        </div>
+                        <div class="ml-3">
+                            <label for="terms" class="block text-sm text-gray-700">
+                                Acepto los <a href="terms-conditions.html"
+                                    class="text-sky-600 hover:text-sky-800">Términos y Condiciones</a> y la
+                                <a href="privacy.html" class="text-sky-600 hover:text-sky-800">Política de
+                                    Privacidad</a>
+                            </label>
+                        </div>
                     </div>
 
                     <button type="submit"
@@ -106,57 +127,179 @@
                                 class="text-sky-600 hover:text-sky-800 font-medium">Iniciar Sesión</a>
                         </p>
                     </div>
+
+                    <div class="flex items-center my-6">
+                        <div class="flex-1 border-t border-gray-300"></div>
+                        <span class="px-3 text-gray-500">o</span>
+                        <div class="flex-1 border-t border-gray-300"></div>
+                    </div>
+                    <div class="grid grid-cols-1">
+
+                        <!-- REGISTRAR CON GOOGLE -->
+                        <div class="google-register">
+                            <!-- <h2>Iniciar sesión con Google</h2> -->
+
+                            <div id="g_id_onload"
+                                data-client_id="89930732527-hrdoef8icenja2j2uotkg997jnej1l6v.apps.googleusercontent.com"
+                                data-callback="handleCredentialResponse" data-auto_prompt="false">
+                            </div>
+
+                            <div class="g_id_signin" data-type="standard"></div>
+
+                            <!-- <script>
+                                function handleCredentialResponse(response) {
+                                    const idToken = response.credential;
+
+                                    // Decodificar JWT para obtener datos del usuario
+                                    const base64Url = idToken.split('.')[1];
+                                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                                    const decodedPayload = JSON.parse(atob(base64));
+
+                                    console.log("Token ID (JWT):", idToken);
+                                    console.log("Datos decodificados:", decodedPayload);
+
+                                    const nombre = decodedPayload.given_name || '';
+                                    const apellido = decodedPayload.family_name || '';
+                                    const correo = decodedPayload.email || '';
+                                    const empresa = 'Google User';
+
+                                    // Consultar si el usuario ya está registrado
+                                    fetch('/api/verificar-usuario', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify({ email: correo })
+                                    })
+                                        .then(res => res.json())
+                                        .then(data => {
+                                            if (data.exists) {
+                                                // Usuario ya registrado → redirigir al sistema
+                                                alert('Bienvenido de nuevo, serás redirigido automáticamente.');
+                                                window.location.href = '/dashboard.html'; // Cambia por tu ruta real
+                                            } else {
+                                                // Llenar formulario con datos de Google
+                                                document.getElementById('first-name').value = nombre;
+                                                document.getElementById('last-name').value = apellido;
+                                                document.getElementById('corporate-email').value = correo;
+                                                document.getElementById('company').value = empresa;
+
+                                                // Hacer los campos de solo lectura
+                                                document.getElementById('first-name').readOnly = true;
+                                                document.getElementById('last-name').readOnly = true;
+                                                document.getElementById('corporate-email').readOnly = true;
+                                                document.getElementById('company').readOnly = true;
+
+                                                // Marcar términos como aceptados
+                                                document.getElementById('terms').checked = true;
+
+                                                // Ocultar los campos de contraseña
+                                                document.getElementById('corporate-password').parentElement.style.display = 'none';
+                                                document.getElementById('confirm-password').parentElement.style.display = 'none';
+
+                                                // Guardar en localStorage por si recarga
+                                                const formData = {
+                                                    firstName: nombre,
+                                                    lastName: apellido,
+                                                    email: correo,
+                                                    company: empresa
+                                                };
+                                                localStorage.setItem('rememberRegistrationData', 'true');
+                                                localStorage.setItem('registrationData', JSON.stringify(formData));
+
+                                                alert('Por favor completa el formulario y haz clic en "Registrarse" para finalizar tu registro.');
+                                            }
+                                        })
+                                        .catch(err => {
+                                            console.error('Error al verificar usuario:', err);
+                                            alert('Hubo un error al verificar tu cuenta, intenta nuevamente.');
+                                        });
+                                }
+                            </script> -->
+                            <script>
+                                function handleCredentialResponse(response) {
+                                    const idToken = response.credential;
+
+                                    // Decodificar JWT
+                                    const base64Url = idToken.split('.')[1];
+                                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                                    const decodedPayload = JSON.parse(atob(base64));
+
+                                    console.log("Token ID (JWT):", idToken);
+                                    console.log("Datos decodificados:", decodedPayload);
+
+                                    const nombre = decodedPayload.given_name || '';
+                                    const apellido = decodedPayload.family_name || '';
+                                    const correo = decodedPayload.email || '';
+                                    const empresa = 'Google User';
+
+                                    // Llenar el formulario
+                                    document.getElementById('first-name').value = nombre;
+                                    document.getElementById('last-name').value = apellido;
+                                    document.getElementById('corporate-email').value = correo;
+                                    document.getElementById('company').value = empresa;
+
+                                    // Hacer campos solo lectura
+                                    document.getElementById('first-name').readOnly = true;
+                                    document.getElementById('last-name').readOnly = true;
+                                    document.getElementById('corporate-email').readOnly = true;
+                                    document.getElementById('company').readOnly = true;
+
+                                    // Aceptar términos automáticamente
+                                    document.getElementById('terms').checked = true;
+
+                                    // Ocultar campos de contraseña
+                                    document.getElementById('corporate-password').parentElement.style.display = 'none';
+                                    document.getElementById('confirm-password').parentElement.style.display = 'none';
+
+                                    // Guardar en localStorage
+                                    const formData = {
+                                        firstName: nombre,
+                                        lastName: apellido,
+                                        email: correo,
+                                        company: empresa
+                                    };
+                                    localStorage.setItem('rememberRegistrationData', 'true');
+                                    localStorage.setItem('registrationData', JSON.stringify(formData));
+
+                                    alert('Formulario llenado con Google. Completa y haz clic en "Registrarse"');
+                                }
+                            </script>
+
+                        </div>
+
+                        <!-- <button type="button"
+                            class="flex items-center justify-center gap-2 bg-white border border-gray-300 rounded-lg py-2 px-4">
+                            <i class="fab fa-microsoft text-blue-600"></i> Microsoft
+                        </button> -->
+                    </div>
+
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="particles-js" class="absolute inset-0" style="z-index: -1;"></div>
+    <div id="particles-js" class="absolute inset-0 -z-10"></div>
 
-    <!-- Script de particulas -->
     <script>
         // Configuración de partículas
         particlesJS("particles-js", {
             "particles": {
-                "number": {
-                    "value": 70,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00598a"
-                },
+                "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00598a" },
                 "shape": {
                     "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 5 }
                 },
                 "opacity": {
                     "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
+                    "anim": { "enable": false }
                 },
                 "size": {
                     "value": 3,
                     "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
+                    "anim": { "enable": false }
                 },
                 "line_linked": {
                     "enable": true,
@@ -169,57 +312,79 @@
                     "enable": true,
                     "speed": 2,
                     "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                    "out_mode": "out"
                 }
             },
             "interactivity": {
                 "detect_on": "canvas",
                 "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
                     "resize": true
                 },
                 "modes": {
                     "grab": {
                         "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
+                        "line_linked": { "opacity": 1 }
                     },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
+                    "push": { "particles_nb": 4 }
                 }
             },
             "retina_detect": true
+        });
+
+        // Función para mostrar/ocultar contraseña (modificada para manejar múltiples campos)
+        function togglePasswordVisibility(inputId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Recordar datos del formulario
+        document.addEventListener('DOMContentLoaded', function () {
+            const rememberCheckbox = document.getElementById('remember-data');
+            const form = document.getElementById('registerForm');
+
+            // Cargar datos guardados si existen
+            if (localStorage.getItem('rememberRegistrationData') === 'true') {
+                rememberCheckbox.checked = true;
+                const savedData = JSON.parse(localStorage.getItem('registrationData') || {});
+
+                document.getElementById('first-name').value = savedData.firstName || '';
+                document.getElementById('last-name').value = savedData.lastName || '';
+                document.getElementById('company').value = savedData.company || '';
+                document.getElementById('corporate-email').value = savedData.email || '';
+            }
+
+            // Manejar envío del formulario
+            form.addEventListener('submit', function (e) {
+                if (rememberCheckbox.checked) {
+                    const formData = {
+                        firstName: document.getElementById('first-name').value,
+                        lastName: document.getElementById('last-name').value,
+                        company: document.getElementById('company').value,
+                        email: document.getElementById('corporate-email').value
+                    };
+
+                    localStorage.setItem('rememberRegistrationData', 'true');
+                    localStorage.setItem('registrationData', JSON.stringify(formData));
+                } else {
+                    localStorage.removeItem('rememberRegistrationData');
+                    localStorage.removeItem('registrationData');
+                }
+
+                // Aquí iría el código normal de envío del formulario
+                // e.preventDefault(); // Descomentar para evitar envío real en este ejemplo
+            });
         });
     </script>
 </body>
