@@ -6,7 +6,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 16rem;
-    animation: animate 34s linear
+    animation: animate 46s linear
     infinite;  
 }
 
