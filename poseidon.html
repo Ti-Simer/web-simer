@@ -35,14 +35,14 @@
             <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
 
                 <a aria-current="page"
-                    onclick="document.getElementById('poseidon-content-1').scrollIntoView({behavior: 'smooth'}); return false;"
+                    onclick="window.scrollTo({ top: document.getElementById('poseidon-content-1').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;"
                     class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#poseidon-content-1">¿Que es Poseidon?</a>
+                    href="#poseidon-content-1">¿Qué es Poseidón?</a>
 
                 <a aria-current="page"
-                    onclick="document.getElementById('poseidon-content-2').scrollIntoView({behavior: 'smooth'}); return false;"
+                    onclick="window.scrollTo({ top: document.getElementById('poseidon-content-2').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;"
                     class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#poseidon-content-2">Caracteristicas</a>
+                    href="#poseidon-content-2">Características</a>
 
                 <a aria-current="page"
                     onclick="document.getElementById('poseidon-content-3').scrollIntoView({behavior: 'smooth'}); return false;"
@@ -85,7 +85,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
 
-                    <button class="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
+                    <button class="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]"
+                        onclick="window.scrollTo({ top: document.getElementById('poseidon-content-1').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;">
                         <div class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg"></div>
                         <div
                             class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500">
@@ -280,16 +281,21 @@
                         <h3 class="text-base sm:text-lg font-light text-gray-900">Componentes Clave</h3>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Control de válvulas</span>
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Control
+                                de válvulas</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Monitoreo en tiempo real</span>
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Monitoreo
+                                en tiempo real</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Comunicación inalámbrica
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Comunicación
+                                inalámbrica
                                 Theory</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Gestión logística</span>
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Gestión
+                                logística</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Plataforma web</span>
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Plataforma
+                                web</span>
                         </div>
                     </div>
                 </aside>

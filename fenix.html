@@ -35,12 +35,12 @@
             <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
 
                 <a aria-current="page"
-                    onclick="document.getElementById('poseidon-content-1').scrollIntoView({behavior: 'smooth'}); return false;"
-                    class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
-                    href="#poseidon-content-1">¿Que es Fenix?</a>
+                    onclick="window.scrollTo({ top: document.getElementById('poseidon-content-1').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;"
+                    class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all
+                    duration-200 hover:bg-gray-100 hover:text-gray-900" href="#poseidon-content-1">¿Que es Fenix?</a>
 
                 <a aria-current="page"
-                    onclick="document.getElementById('poseidon-content-2').scrollIntoView({behavior: 'smooth'}); return false;"
+                    onclick="window.scrollTo({ top: document.getElementById('poseidon-content-2').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;"
                     class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
                     href="#poseidon-content-2">Caracteristicas</a>
 
@@ -87,7 +87,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
 
-                    <button class="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
+                    <button class="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]"
+                        onclick="window.scrollTo({ top: document.getElementById('poseidon-content-1').getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); return false;">
                         <div class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg"></div>
                         <div
                             class="absolute inset-0 bg-gradient-to-r from-sky-600 to-blue-600 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500">
@@ -236,7 +237,8 @@
                                 </div>
                                 <blockquote class="relative border-l-2 border-neutral-700 pl-4 sm:pl-6 py-3 sm:py-4">
                                     <p class="text-lg sm:text-xl text-gray-900 italic font-light">
-                                        "Una tecnología muy avanzada puede parecer magica para quien no conoce su funcionamiento."
+                                        "Una tecnología muy avanzada puede parecer magica para quien no conoce su
+                                        funcionamiento."
                                     </p>
                                     <cite class="block mt-3 sm:mt-4 text-sm text-neutral-400">— Ivan Mesa</cite>
                                 </blockquote>
@@ -282,19 +284,19 @@
                         <h3 class="text-base sm:text-lg font-light text-gray-900">Componentes Clave</h3>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Tarjeta
                                 madre</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Tarjeta
                                 análoga</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Tarjeta
                                 de potencia</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Tarjeta
                                 barcode</span>
                             <span
-                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors duration-300">Tarjeta
+                                class="px-2 sm:px-3 py-1 bg-neutral-50/0 border border-neutral-800 rounded-full text-xs sm:text-sm text-neutral-400 hover:text-gray-500 hover:border-neutral-700 transition-colors duration-300">Tarjeta
                                 de regulación</span>
                         </div>
                     </div>
